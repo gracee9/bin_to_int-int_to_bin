@@ -1,0 +1,30 @@
+def bin_to_int(bi):
+  sum = 0
+  base = 2
+  p = 1
+  for i in range(len(bi)-1,-1,-1):
+    sum = sum + int(bi[i])*p
+    p = p*base
+  return sum
+
+
+bi = str(input())
+p = bin_to_int(bi)
+print(p)
+
+
+
+def int_to_bin(num):
+  base = 2
+  a=""
+  while num>0:
+    d=num%base
+    b=str(d)
+    a=b+a
+    num=int(num/base)
+  return a
+  
+
+num = int(input())
+s = int_to_bin(num)
+print(s)
